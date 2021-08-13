@@ -11,19 +11,19 @@ services:
     - login
 
   login:
-    image: 549652764117.dkr.ecr.us-east-1.amazonaws.com/cart:1.0.2
+    image: 549652764117.dkr.ecr.us-east-1.amazonaws.com/login:1.0.2
     container_name: login
     depends_on:
     - users
     
   todo:
-    image: 549652764117.dkr.ecr.us-east-1.amazonaws.com/catalogue:1.0.2
+    image: 549652764117.dkr.ecr.us-east-1.amazonaws.com/todo:1.0.2
     container_name: todo
     depends_on:
     - redis
     
   users:
-    image: 549652764117.dkr.ecr.us-east-1.amazonaws.com/user:1.0.2
+    image: 549652764117.dkr.ecr.us-east-1.amazonaws.com/users:1.0.2
     container_name: users
     image: users
      
